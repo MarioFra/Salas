@@ -1,0 +1,35 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 1rem;
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.app {
+  margin-left: 175px; /* Espacio para el NavBar */
+  margin-top: 70px; /* Espacio para el Header */
+  padding: 2rem;
+  background-color: #282e71;
+  color: #ffffff;
+  width: calc(100% - 175px);
+  min-height: calc(100vh - 60px); /* Altura descontando el Header */
+  box-sizing: border-box;
+}

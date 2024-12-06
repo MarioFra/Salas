@@ -1,0 +1,45 @@
+/* src/components/NavBar.css */
+nav {
+  background-color: #bd0f0f; /* Color de fondo */
+  padding: 1rem;
+  width: 175px; /* Ancho de la barra de navegación */
+  height: 100%; /* Ocupa toda la altura */
+  position: fixed; /* Fija el NavBar en el lado izquierdo */
+  top: 100px; /* Mueve el NavBar hacia abajo */
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.logo {
+  text-align: center; /* Centra el logo */
+  margin-bottom: 1rem; /* Espacio entre el logo y los enlaces */
+}
+
+.logo-img {
+  max-width: 100%; /* Ajusta el tamaño según el contenedor */
+  height: auto; /* Mantiene las proporciones del logo */
+  width: 150px; /* Ancho del logo, puedes ajustarlo */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color: #005bb5;
+  color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+}
