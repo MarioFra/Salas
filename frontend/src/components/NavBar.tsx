@@ -15,6 +15,8 @@ const NavBar: React.FC = () => {
         <li><Link to="/calendario">Calendario</Link></li>
         <li><Link to="/historial">Historial de reservas</Link></li>
         <li><Link to="/ayuda">Ayuda</Link></li>
+        <li><Link to="/otra opcion">Otra opcion</Link></li>
+
       </ul>
     </nav>
   );
