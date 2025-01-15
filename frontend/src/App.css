@@ -1,6 +1,6 @@
-/* App.css */
-
-body, html {
+/* General */
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,7 +15,7 @@ body, html {
 nav {
   background-color: #ffffff;
   padding: 1rem;
-  width: 150px;
+  width: 150px; /* Asegúrate de que el nav tenga un ancho de 150px */
   height: 100vh;
   position: fixed;
   top: 0;
@@ -24,12 +24,27 @@ nav {
 }
 
 .app {
-  margin-left: 175px; /* Espacio para el NavBar */
-  margin-top: 70px; /* Espacio para el Header */
+  margin-left: 150px; /* Ajusta el margen para que coincida con el ancho del nav */
   padding: 2rem;
   background-color: #282e71;
   color: #ffffff;
-  width: calc(100% - 175px);
+  width: calc(100% - 150px); /* Ajusta el ancho del contenido */
   min-height: calc(100vh - 60px); /* Altura descontando el Header */
   box-sizing: border-box;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav {
+    position: static; /* Hace que el NavBar fluya con el contenido */
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Ajusta la altura según el contenido */
+    box-shadow: none; /* Quita la sombra si no es necesaria en móviles */
+  }
+
+  .app {
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-top: 60px; /* Deja espacio para el Header si existe */
+    width: 100%; /* La app ocupa todo el ancho disponible */
+  }
 }

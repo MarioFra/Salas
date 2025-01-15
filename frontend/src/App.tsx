@@ -5,9 +5,10 @@ import NavBar from './components/NavBar';
 import Inicio from './pages/Inicio';
 import ReservarSala from './pages/ReservarSala';
 import MisReservas from './pages/MisReservas';
-import Calendario from './pages/Calendario';
+import Calendario from './pages/Calendario'
 import HistorialReservas from './pages/HistorialReservas';
 import Ayuda from './pages/Ayuda';
+
 import './App.css'; // Importa el CSS principal
 const App: React.FC = () => {
   return (

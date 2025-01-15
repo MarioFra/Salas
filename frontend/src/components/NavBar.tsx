@@ -1,22 +1,30 @@
-// src/components/NavBar.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'; // Asegúrate de que el archivo CSS esté importado
+import './NavBar.css';
 
 const NavBar: React.FC = () => {
-  return (
-    <nav>
-      
-      {/* Menú de navegación */}
-      <ul>
-        <li><Link to="/inicio">Inicio</Link></li>
-        <li><Link to="/reservar-sala">Reservar sala</Link></li>
-        <li><Link to="/mis-reservas">Mis reservas</Link></li>
-        <li><Link to="/calendario">Calendario</Link></li>
-        <li><Link to="/historial">Historial de reservas</Link></li>
-        <li><Link to="/ayuda">Ayuda</Link></li>
-        <li><Link to="/otra opcion">Otra opcion</Link></li>
+  // Definimos las rutas en un arreglo para facilitar su mantenimiento
+  const navItems = [
+    { path: '/inicio', label: 'Inicio' },
+    { path: '/reservar-sala', label: 'Reservar sala' },
+    { path: '/mis-reservas', label: 'Mis reservas' },
+    { path: '/calendario', label: 'Calendario' },
+    { path: '/historial', label: 'Historial de reservas' },
+    { path: '/ayuda', label: 'Ayuda' },
+    { path: '/otra-opcion', label: 'Otra opción' },
+  ];
 
+  return (
+    <nav aria-label="Menú principal">
+      {/* Menú de navegación */}
+      <ul className="nav-list">
+        {navItems.map((item) => (
+          <li key={item.path} className="nav-item">
+            <Link to={item.path} className="nav-link">
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

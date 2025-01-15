@@ -1,4 +1,4 @@
-/* src/components/NavBar.css */
+/* Estilos generales del NavBar */
 nav {
   background-color: #bd0f0f; /* Color de fondo */
   padding: 1rem;
@@ -10,6 +10,7 @@ nav {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
+/* Logo en el NavBar */
 .logo {
   text-align: center; /* Centra el logo */
   margin-bottom: 1rem; /* Espacio entre el logo y los enlaces */
@@ -18,9 +19,10 @@ nav {
 .logo-img {
   max-width: 100%; /* Ajusta el tamaño según el contenedor */
   height: auto; /* Mantiene las proporciones del logo */
-  width: 150px; /* Ancho del logo, puedes ajustarlo */
+  width: 150px; /* Ancho del logo */
 }
 
+/* Lista de enlaces */
 ul {
   list-style: none;
   display: flex;
@@ -30,6 +32,7 @@ ul {
   padding: 0;
 }
 
+/* Estilos para los enlaces */
 a {
   text-decoration: none;
   color: #000000;
@@ -39,7 +42,27 @@ a {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Enlace activo */
+a.active {
+  background-color: #9b0000; /* Color de fondo para la ruta activa */
+  color: #ffffff; /* Color de texto para la ruta activa */
+}
+
+/* Efecto hover en los enlaces */
 a:hover {
   background-color: #005bb5;
-  color: #ffffff; /* Cambiar el color del texto al pasar el cursor */
+  color: #ffffff;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  nav {
+    width: 100%; /* Cambia el ancho a ocupar todo el espacio */
+    height: auto; /* Ajusta la altura automáticamente */
+    top: 0; /* Coloca el NavBar en la parte superior */
+  }
+  ul {
+    flex-direction: row; /* Cambia la dirección de los enlaces a horizontal */
+    justify-content: space-around; /* Distribuye los enlaces horizontalmente */
+  }
 }
